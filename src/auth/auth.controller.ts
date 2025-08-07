@@ -7,17 +7,11 @@ export class AuthController {
 
   @Post('signup')
   signup() {
-    return {
-      message: 'User signed up successfully',
-      user: { username: 'exampleUser' },
-    };
+    return this.authService.signup();
   }
 
   @Post('signin')
   signin() {
-    return {
-      message: 'User signed in successfully',
-      user: { username: 'exampleUser' },
-    };
+    return this.authService.signin();
   }
 }
